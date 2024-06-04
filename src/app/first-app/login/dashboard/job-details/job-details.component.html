@@ -1,0 +1,14 @@
+<div *ngIf="job">
+<div class="card" style="width: 30rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{job.title}}</h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">{{job.salary}}</h6>
+      <p class="card-text">{{job.description}}</p>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{job.location}}</li>
+        <li class="list-group-item">{{job.experience}}</li>
+      </ul>
+      <button class="btn btn-primary" (click)="apply()">Apply</button>
+    </div>
+  </div>
+</div>

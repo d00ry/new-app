@@ -1,0 +1,41 @@
+<div class="nav">
+    <div class="d-flex justify-content-between container p-3" style="width: 100%;">
+      <h1 appHighlight>Dashboard</h1>
+      <button type="submit" class="btn btn-primary" (click)="logout()" style="width: 150px; margin-left: 20px;" >Logout</button>
+    </div>
+   </div>
+
+   <div class="container mt-5">
+    <table class="table table-striped">
+     <thead>
+      <tr>
+       <th scope="col">#</th>
+       <th scope="col">Job Title</th>
+       <th scope="col">Salary Range</th>
+       <th scope="col">Experience Required</th>
+       <th scope="col">Location</th>
+       <th scope="col">Select></th>    
+      </tr>
+     </thead>
+     <tbody>
+      <tr *ngFor="let job of jobs" [ngClass] = "{'highlighted': job.applied}">
+       <th scope="row">{{job.id}}</th>
+       <td>{{job.title | uppercase}}</td>
+       <td>{{job.salary}}</td>
+       <td>{{job.experience}}</td>
+       <td>{{job.location}}</td>
+       <td><button class="btn btn-primary" (click)="select(job)">Select</button></td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+  <div class="d-flex justify-content-around container p-3">
+    <button class="btn btn-primary" (click)="createJob()">Create job</button>
+    <button class="btn btn-danger" (click)="deleteJob()">Delete job</button>
+  </div>
+
+    <div class="d-flex justify-content-center container p-3">
+        <app-job-details [job] = "selectedJob" (applied) ="applied($event)"></app-job-details>
+    </div>
+

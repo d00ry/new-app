@@ -1,0 +1,63 @@
+<div *ngIf="loginFailed" class="alert alert-danger" role="alert">
+  Authentication failed! Invalid input!
+</div>
+<div class="container d-flex flex-grow-1 justify-content-center align-items-center mt-5">
+  <div *ngIf="activeForm === 'login'" class="card">
+    <div class="card-body">
+      <h5 class="card-title">Login</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Here you can login adding your email address and password.</h6>
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Enter email" formControlName="email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+            formControlName="password">
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <p (click)="toggleForm('register')">Haven't joined yet? Register here</p>
+    </div>
+  </div>
+  <div *ngIf="activeForm === 'register'" class="card">
+    <div class="card-body">
+      <h5 class="card-title">Register</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Register your account here</h6>
+      <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <div class="form-group">
+          <label>Firstname</label>
+          <input type="email" class="form-control" placeholder="Enter firstname" formControlName="firstName">
+        </div>
+        <div class="form-group">
+          <label>Lastname</label>
+          <input type="email" class="form-control" placeholder="Enter lastname" formControlName="lastName">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Enter email" formControlName="email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+            formControlName="password">
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <p (click)="toggleForm('login')">Do you already have an account? Click here</p>
+    </div>
+  </div>
+</div>

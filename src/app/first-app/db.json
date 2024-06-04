@@ -1,0 +1,28 @@
+{
+  "jobs": [
+    {
+      "id": "1",
+      "title": "Software Engineer",
+      "salary": "$70,000 - $150,000",
+      "experience": "2+ years of experience in software development",
+      "location": "Various (depends on company)",
+      "description": "Software engineers design, develop, and maintain software applications. They work on creating user-friendly interfaces, writing code, debugging, and testing software systems."
+    },
+    {
+      "id": "2",
+      "title": "Registered Nurse",
+      "salary": "$50,000 - $100,000",
+      "experience": "'Varies by position, typically 1-2 years of clinical experience'",
+      "location": "'Hospitals, clinics, nursing homes, etc.'",
+      "description": "'Registered nurses provide patient care in various healthcare settings. They assess patient health needs, develop care plans, administer medications, and educate patients and their families about health conditions.'"
+    },
+    {
+      "id": "2",
+      "title": "Registered Nurse",
+      "salary": "$50,000 - $100,000",
+      "experience": "'Varies by position, typically 1-2 years of clinical experience'",
+      "location": "'Hospitals, clinics, nursing homes, etc.'",
+      "description": "'Registered nurses provide patient care in various healthcare settings. They assess patient health needs, develop care plans, administer medications, and educate patients and their families about health conditions.'"
+    }
+  ]
+}
